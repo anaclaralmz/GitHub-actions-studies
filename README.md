@@ -23,8 +23,9 @@ Mas como funcionam os workflows? Um workflow é definido a partir de um arquivo 
 ## 3. A função e a importância do AWS CloudFormation na automação da infraestrutura
 O AWS CloudFormation é um serviço de IaC (infraestructure as Code) utilizado para gerenciar uma infraestrutura da AWS através de código, e facilita muito na automatização da construção, manutenção e aplicação de mudanças a softwares hospedados na AWS.
 <img src="./assets/cloudformation-fluxo.png">
-
+### template de exemplo
 Para exemplificar, de forma prática, a criação do YAML do cloudformation, foi anexado um template de exemplo: [template.yaml](./cloudformation/template.yaml).
+
 Esse template de cloudformation cria e configura a infraestrutura necessária para configurar um pipeline de CI/CD usando GitHub Actions e CodeDeploy. Através deste template, diversos recursos da AWS são configurados automaticamente, incluindo instâncias EC2, VPC, subredes, Auto Scaling e Load Balancer. Além disso, são criados roles IAM para permitir que os serviços realizem ações específicas com permissões adequadas.
 
 ## 4. Como a integração de GitHub Actions com AWS CloudFormation e Amazon EC2 pode ser aplicada em projetos reais
@@ -40,7 +41,7 @@ Pensando no escopo de automatização de processos de software através de uma a
 - O AWS Cloudformation é um pouco limitado quando se fala de diferentes ambientes em cloud, visto que só permite um gerenciamento de recursos na nuvem da AWS. Porém, quando o objetivo é automatizar a implantação de softwares que utilizam de outras nuvens, como Azure, foi encontrada a solução de utilizar o GitHub Actions em conjunto com o Terraform, que tem o mesmo papel do cloudformation, mas com uma flexibilidade maior em relação às clouds.
 - Manter as credenciais de acesso à AWS seguras e bem gerenciadas é muito importante, e acaba sendo um ponto de atenção, porque expor essas chaves de acesso ou permissões excessivas pode levar a vulnerabilidades de segurança do software. Além disso, foram encontradas dificuldades ao utilizarmos do AWS Academy, visto que algumas das chaves e credencias são temporárias, e precisam ser atualizadas periódicamente. Para enfrentar essas dificuldades, foi achada a solução de utilizar o AWS Identity and Access Management (IAM) para aplicar o princípio de menor privilégio e usar secrets management, como GitHub Secrets.
 ## Referências
-AMAZON Web Services. Integrating with GitHub Actions CI/CD Pipeline to Deploy a Web App to Amazon EC2. 2024. Disponível em: https://aws.amazon.com/pt/blogs/devops/integrating-with-github-actions-ci-cd-pipeline-to-deploy-a-web-app-to-amazon-ec2/. Acesso em: 19 maio 2024.
+AMAZON Web Services, Inc. ou suas afiliadas. Integrating with GitHub Actions CI/CD Pipeline to Deploy a Web App to Amazon EC2. 2024. Disponível em: https://aws.amazon.com/pt/blogs/devops/integrating-with-github-actions-ci-cd-pipeline-to-deploy-a-web-app-to-amazon-ec2/. Acesso em: 19 maio 2024.
 
 GITHUB, Inc. Understanding GitHub Actions. 2024. Disponível em: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions. Acesso em: 19 maio 2024.
 
