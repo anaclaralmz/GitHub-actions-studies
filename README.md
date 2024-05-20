@@ -15,8 +15,8 @@ O GitHub Actions é um recurso da plataforma GitHub, e auxilia no processo de au
 - steps
 - actions 
 <img src="./assets/github-workflow.png">
-Para que um **workflow** seja trigado, deve ser configurado um **evento** que o acione (como a abertura de um Pull Request, por exemplo). Cada workflow contém um ou mais **jobs** que vão ser executados da forma que desejar (sequencialmente ou paralelamente).
-Cada um desses jobs irá rodar dentro de uma máquina virtual **runner**, ou dentro de um container, e contém um ou mais **steps** - que rodam um script ou uma **action**.
+Para que um <b>workflow</b> seja trigado, deve ser configurado um <b>evento</b> que o acione (como a abertura de um Pull Request, por exemplo). Cada workflow contém um ou mais <b>jobs</b> que vão ser executados da forma que desejar (sequencialmente ou paralelamente).
+Cada um desses jobs irá rodar dentro de uma máquina virtual <b>runner</b>, ou dentro de um container, e contém um ou mais <b>steps</b> - que rodam um script ou uma <b>action</b>.
 
 Mas como funcionam os workflows? Um workflow é definido a partir de um arquivo .YAML que deve estar presente no caminho `.github/workflows` no seu repositório do GitHub, e que será responsável por conter os jobs que devem ser rodados quando algum evento ocorrer, ou quando for trigado manualmente.
 
